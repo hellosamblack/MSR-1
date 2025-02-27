@@ -39,6 +39,20 @@ wifi:
 bluetooth_proxy:
   active: true
 
+external_components:
+  source: github://hellosamblack/ESPHome-Configurations
+  components: [ wifi_csi ]
+
+wifi_csi:
+  id: csi_motion
+  name: WiFi Motion detected
+  timing: 100ms
+  buffer_size: 100
+  hysteresis: 5
+  filters:
+    - delayed_off: 300000ms
+    - delayed_on: 500ms
+
 packages:
   remote_package:
     url: https://github.com/hellosamblack/MSR-1/
