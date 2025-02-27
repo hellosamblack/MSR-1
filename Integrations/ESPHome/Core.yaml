@@ -342,12 +342,6 @@ sensor:
     id: sys_uptime
     update_interval: 60s
 
-  - platform: wifi_signal
-    name: RSSI
-    id: wifi_signal_db
-    update_interval: 60s
-    entity_category: "diagnostic"
-
   - platform: scd4x
     id: scd40
     co2:
